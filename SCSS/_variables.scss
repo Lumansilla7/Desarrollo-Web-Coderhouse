@@ -1,0 +1,38 @@
+/* Colores y fuentes */
+$color-principal:#C74DF2 ;
+$color-secundario: #FFFFFF;
+$color-hover:#842ba5;
+$size-titulos: 25px; 
+$radius-boton: 10px;
+$radius-card: 10px;
+
+/* Tamaños de medias queries */
+$pantalla-chica: 480px;
+$pantalla-mediana: 768px;
+$pantalla-grande: 1200px; 
+
+/*Mixin*/
+@mixin flex-justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-justify-spacebetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-justify-spacearound {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin tipografia ($fontsize, $fontwight) {
+    font-size: $fontsize;
+    font-weight: $fontwight;
+}

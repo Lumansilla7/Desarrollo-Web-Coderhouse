@@ -4,14 +4,16 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Terapia cognitivo conductual,Sesion,Psicologo,Terapia, Cursos TCC online, html,sass,github,css,git,bootstrap">
+        <meta name="description" content="Centro de Terapia Cognitivo Conductual especializado en adultos y adolescentes. Brindamos cursos online de TCC">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/53443b9906.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <link rel="stylesheet" href="CSS/styles.css">
-        <title>Espacio Psi</title>
+        <link rel="stylesheet" href="SCSS/styles.css">
+        <title>Espacio Psi | Servicios</title>
     </head>
     <body>
             <header>
@@ -44,34 +46,37 @@
                 </nav>
             </header>
         <img src="Fotos/whatsapp.png" class="whatsapp"/>
-        <h1 class="titulo">Nuestros servicios</h1>
+        <h1 class="titulo titulo_servicios">Nuestros servicios</h1>
         <section>
-            <div class="nuestroservicios">
-                <div class="nuestroservicios grid1">
-                    <div class="card1">
-                        <img src="Fotos/handshake-solid.svg" alt="Tratamiento psicológico" class="nuestroservicios_img">
-                        <p class="card1_titulo5">CONTACTARNOS</p>
-                        <p class="card1_texto">Podés escribirnos para que nos pongamos en contacto con vos</p>
+            <div class="nuestroservicios nuestroservicios_">
+                <div class="nuestroservicios grid1 nuestroservicios_">
+                    <div class="card1 card1_">
+                        <img src="Fotos/handshake-solid.svg" alt="Tratamiento psicológico" class="nuestroservicios_img img1">
+                        <p class="card1_titulo5 card1_titulo5_">CONTACTARNOS</p>
+                        <p class="card1_texto card1_texto_">Podés escribirnos para que nos pongamos en contacto con vos</p>
                     </div>
-                    <div class="card1">
-                        <img src="Fotos/people.png" alt="Tratamiento psicológico" class="nuestroservicios_img">
-                        <p class="card1_titulo5">TRATAMIENTO PSICOLÓGICO</p>
-                        <p class="card1_texto">Terapia cognitivo-conductual. Presencial y a distancia</p>
+                    <div class="card1 card1_">
+                        <img src="Fotos/people.png" alt="Tratamiento psicológico" class="nuestroservicios_img img11">
+                        <p class="card1_titulo5 card1_titulo5_">TRATAMIENTO PSICOLÓGICO</p>
+                        <p class="card1_texto card1_texto_">Terapia cognitivo-conductual. 
+                            Presencial y a distancia
+                        </p>
                     </div>
-                    <div class="card1">
-                            <img src="Fotos/supervisiones.png" alt="Tratamiento psicológico" class="nuestroservicios_img">
-                            <p class="card1_titulo5">SUPERVISIÓN</p>
-                            <p class="card1_texto">Individual o grupal. Presencial y a distancia.</p>
+                    <div class="card1 card1_">
+                            <img src="Fotos/supervisiones.png" alt="Tratamiento psicológico" class="nuestroservicios_img img11">
+                            <p class="card1_titulo5 card1_titulo5_">SUPERVISIÓN</p>
+                            <p class="card1_texto card1_texto_">Individual o grupal. Presencial y a distancia.</p>
                     </div>
-                    <div class="card1">
+                    <div class="card1 card1_">
                         <img src="Fotos/cursoss.png" alt="Tratamiento psicológico" class="nuestroservicios_img">
-                        <p class="card1_titulo5">CURSOS</p>
-                        <p class="card1_texto">Formación en terapia basada en la evidencia</p>
+                        <p class="card1_titulo5 card1_titulo5_">CURSOS</p>
+                        <p class="card1_texto card1_texto_">Formación en terapia basada en la evidencia</p>
                     </div>
                 </div>
+            </div>
         </section>
         <section>
-            <h2 class="titulo">Te podemos ayudar</h2>
+            <h2 class="titulo titulo_servicios">Te podemos ayudar</h2>
             <div class="tratamientos_listas">
                 <div class="div_listas">
                     <div class="doslistas_tratamiento wow animate__animated animate__backInLeft">
@@ -111,9 +116,41 @@
                 </div>
             </div>
         </section>
+        <h2 class="titulo_servicios_">Pasos para comenzar el tratamiento</h2>
         <section>
-            <h2 class="titulo_servicios">Pasos para comenzar el tratamiento</h2>
+                <div class="nuestroservicios grid1">
+                    <div class="card_pasos">
+                        <i class="fa-solid fa-comments icon_pasos" alt="Contacto"></i>
+                        <p class="cardpasos_titulo">Contactanos</p>
+                        <p class="cardpasos_texto">Escribinos y contanos en qué te podemos ayudar. En el transcurso de ese día nos comunicaremos con vos</p>
+                    </div>
+                    <div class="card_pasos">
+                        <i class= "fa-solid fa-clock icon_pasos" alt="Horarios"></i>
+                        <p class="cardpasos_titulo">Coordinar horarios</p>
+                        <p class="cardpasos_texto"> Luego de hablar, podremos coordinar horarios para nuestro primer encuentro
+                        </p>
+                    </div>
+                    <div class="card_pasos">
+                        <i class="fa-solid fa-credit-card icon_pasos" alt="Abonar sesión"></i>
+                            <p class="cardpasos_titulo">Abonar la sesión</p>
+                            <p class="cardpasos_texto">Podés hacerlo mediante transferencia bancaria, Mercadopago o Paypal.</p>
+                    </div>
+                    <div class="card_pasos">
+                        <i class="fa-solid fa-hand-holding-seedling icon_pasos"></i>
+                        <p class="cardpasos_titulo">Tener la sesión</p>
+                        <p class="cardpasos_texto">El día y horario pactado, tendremos nuestro primer encuentro.</p>
+                    </div>
+                </div>
         </section>
+        <div>
+            <h3 class="nuestrasredes">Nuestras redes</h3>
+            <div class="redes">
+                <img src="Fotos/facecolor.png" class="redes2"/>
+                <img src="Fotos/tuiticolor.png" class="redes1"/>
+                <img src="Fotos/whatscolor.png" class="redes1"/>
+                <img src="Fotos/instacolor.png" class="redes2"/>
+            </div>
+        </div>
         <footer class="footer">
             <p >© 2022 Espacio Psi, Inc. Todos los derechos reservados</p>
         </footer>

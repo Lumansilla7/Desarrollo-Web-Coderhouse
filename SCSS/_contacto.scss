@@ -1,0 +1,175 @@
+/* Formulario de registro index - contacto*/
+
+.registro{
+    border-radius: 0 0 10px 10px;
+    border-top: 5px solid $color-principal;
+    @include sizes(50%, 400px);
+    background-color: $color-secundario;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+.subtitulo{
+    @extend .subtitulos-contacto;
+    font-size: 15px;
+    padding: 0.5rem;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+}
+
+.formregistro{
+    @include flex-justify-spacearound;
+}
+
+.formulario1{
+    padding: 1px;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    z-index: 5;
+    flex-grow: 1;
+    margin-top: 0.1rem ;
+    margin-bottom: 0.1rem;  
+}
+
+.form{
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid grey;
+    justify-content: center;
+    margin: 0.5rem 1rem 1rem 1rem;
+    padding: 4px;
+    width: 70%;
+    color: $color-principal;
+}
+
+.form:focus{
+    outline: none;
+}
+
+.form::placeholder{
+    color: #494545;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.button-container{
+    @include flex-justify-center;
+}
+
+.botonform{
+    @extend .botones-generales;
+    border-radius: $radius-boton;
+    padding: 0.5rem 6rem;
+    letter-spacing: 0.5px;
+    transition: all 1s;
+}
+
+.botonform:hover{
+    background-color:$color-hover;
+}
+
+/*PAGE CONTACTOS*/
+.subtitulo_contacto{
+    @extend .subtitulos-contacto;
+    font-size: 22px;
+    color:$color-principal;
+    letter-spacing: 1px;
+    margin-bottom: 5rem;
+    margin-top: 8rem;
+}
+
+.titulo_informacion{
+    @include tipografia (18px, bold);
+    text-align:center;
+    color: #ca9fda;
+    margin:10% 8% 20% 0%;
+}
+
+
+@media (min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
+    .formregistro{
+        flex-direction: column;
+        margin: 3% auto 10% 13%;
+    }
+    .form{
+        font-size: 12px;
+        width: 50%;
+        height: auto;
+    } 
+    .registro{
+        width: 90%;
+    }
+
+    .botonform{
+        width: 60%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .info_necesaria{
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .titulo_informacion{
+        margin:5rem;
+        font-size: 24px;
+    }
+
+    .redicon_{
+        @include sizes(40px,40px)  
+    }
+
+    .redicon_1{
+        @include sizes(40px,40px)  
+    }
+
+    .datos_{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: $pantalla-chica){
+    .formregistro{
+        flex-direction: column;
+        margin: 5% auto 10% 13%;
+    } 
+    .form{
+        font-size: 12px;
+        width: 50%;
+        height: auto;
+    } 
+    .registro{
+        width: 90%;
+    }
+
+    .botonform{
+        width: 10%;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .info_necesaria{
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .titulo_informacion{
+        margin: 2rem 0rem 5rem 1rem;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .redicon_{
+        @include sizes(35px,35px)  
+    }
+
+    .redicon_1{
+        @include sizes(30px,30px)  
+    }
+
+    .datos_{
+        font-size: 20px;
+    }
+}
+

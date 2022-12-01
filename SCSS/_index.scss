@@ -1,0 +1,573 @@
+
+/* PAGE INDEX*/
+/* Imagen + texto*/
+.imagen{
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(../Fotos/fondo1.png);
+    background-size: 100%;
+    height: 60%;
+}
+
+.tituloprincipal{
+    @include tipografia (28px, lighter);
+    margin-left: 10%;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    letter-spacing: 2.5px;
+}
+
+.textobienvenida{
+    width: 81%;
+    padding: 1.5rem;
+    color:$color-secundario; 
+    @include tipografia (18px, lighter); 
+}
+
+.invitacion{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 40%;
+    margin-top: 5% ;
+    margin-bottom: 10%;
+    @include tipografia (19px, lighter);
+    letter-spacing: 2px;
+    line-height: 3rem;
+}
+
+/* Nuestros servicios*/
+.titulo{
+font-weight: bold;
+text-align: center;
+font-size: $size-titulos;
+letter-spacing: 2px;
+padding-top: 5rem;
+margin-bottom: 0.05rem;
+position: relative;
+width: 300px;
+margin: 0 auto 5rem auto;
+}
+
+.titulo::after{
+    content: '';
+    @include sizes(50px, 2.5px);
+    background-color:$color-principal;
+    position: absolute;
+    left: 125px;
+    bottom: -8px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.subtituloayuda{
+    margin-left: 150px;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    @include tipografia (15px, bold);
+    letter-spacing: 3px;
+    color: $color-secundario; 
+    background:$color-principal;
+    border-radius: 25px;
+    padding: 7px;
+    width: 12%;
+    text-align: center;
+    transition:ease-in-out 1s;
+    animation: cargando 4s;
+    animation-iteration-count:1;
+    animation-delay: 2s;
+}
+
+.subtituloayuda:hover{
+    width: 300px;
+}
+
+.subtituloayuda1{
+    margin-left: 60rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    @include tipografia (15px, bold);
+    letter-spacing: 3px;
+    color: $color-secundario; 
+    background:$color-principal;
+    border-radius: 25px;
+    padding: 7px;
+    width: 18%;
+    text-align: center;
+    animation: cargando 2s;
+    transition:ease-in-out 1s;
+    animation-iteration-count: 1;
+    animation-delay: 4s;
+}
+
+.subtituloayuda1:hover{
+    width: 350px;
+}
+
+@keyframes cargando {
+    100% {
+        width: 30%;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr ;
+    grid-template-rows: 500px;
+    column-gap: 100px;
+    }
+
+.services{
+    @include tipografia (18px, bold);
+    letter-spacing: 1px;
+    margin:  2rem 0 2rem 120px;
+    padding-top: 0.1rem;
+}
+
+.fa-circle-check{
+    color:$color-principal ;
+    font-size: 1.5rem;
+}
+
+.imagecontainer{
+    position: relative;
+}
+
+.image{
+    @include sizes(80%, 80%);
+    position: absolute;
+    left: 5px;
+}
+
+.nuestroservicios{
+    @include flex-justify-center;
+}
+
+.grid1{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-template-rows: 410px;
+    column-gap: 10px;
+    }
+
+@media screen and (max-width: $pantalla-chica ) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 280px;
+    }
+    .grid1{
+        grid-template-columns: 1fr;
+        grid-template-rows: 340px;
+    }
+    .services{
+        @include tipografia (15px, bold);
+        letter-spacing: 1px;
+        margin:  2rem 0 2rem 2rem;
+        padding-top: 0.1rem;
+}
+}
+@media screen and (max-width: $pantalla-mediana) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px;
+    }
+    .grid1 {
+        grid-template-columns: 4fr 4fr;
+        grid-template-rows: 450px 450px;
+        column-gap: 2px;
+    }
+
+    .services{
+        @include tipografia (15px, bold);
+        letter-spacing: 1px;
+        margin:  2rem 0 2rem 2rem;
+        padding-top: 0.1rem;
+}
+}
+
+.card1{
+    border-radius: $radius-card; 
+    width: 70%;
+    margin: 5rem 0 3rem 4rem;
+    background-color: $color-secundario;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.nuestroservicios_img{
+    @include sizes(30%, 5rem);
+    margin: 10% 20% 10% 35%;
+}
+
+.visually-hidden{
+    color: black;
+}
+.whatsapp{
+    position: fixed;
+    padding: 0.6rem;
+    display: block !important;
+    border-radius: 0.2rem;
+    top: 73%;
+    left: 92%;
+    z-index: 9999;
+    @include sizes(50px, 50px);
+}
+
+.whatsapp:hover{
+    transform: scale(1.5);
+}
+
+.card1_titulo5{
+    @include tipografia (15px, bold);
+    @extend .cards-titulo;
+}
+
+.card1_texto{
+    @extend .cards-texto;
+    width: 100%;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    font-style: italic;
+}
+
+/*Sobre nosotros*/
+
+.quienesomos{
+    @include flex-justify-spacearound;
+}
+
+.card{
+    border-radius: $radius-card;
+    border-style: solid light;
+    width: 70%;
+    background-color: $color-secundario;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    margin-bottom: 10rem;
+    margin-left: 5rem;
+}
+
+.card_nombre{ 
+    @include tipografia (20px, normal);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.card_textodescriptivo{
+    @extend .cards-texto;
+    width: 100%;
+    margin-bottom: 2rem; 
+    box-sizing: border-box;
+    padding: 0 1rem;
+    font-style: italic;
+}
+
+.boton{
+    @extend .botones-generales;
+    display: block;
+    margin:  0 auto 2rem auto;
+    border-radius: 15px;
+    padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+    letter-spacing: 1.7px;
+    text-align: center;
+    transition: all 1s;
+}
+
+.boton:hover{
+    background-color:$color-hover
+}
+.card_img{ 
+    @include sizes(100%, 23rem);
+    border-radius: $radius-card; 
+}
+
+/* Lista index*/
+
+.background{
+    background-image: url('../Fotos/Fondo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 3rem;
+}
+
+
+.tepodemosayudar{
+    font-size: $size-titulos;
+    font-weight: lighter;
+    padding: 1.5rem;
+    letter-spacing: 2px;
+    color:$color-secundario;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.tepodemosayudar::after{
+    content: '';
+    @include sizes(50px, 2.5px);
+    background-color: $color-secundario;
+    position: absolute;
+    left: 730px;
+    bottom: 10px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.lista{
+    @include flex-justify-spacearound;
+    margin: 1% 40% 5% 5%;
+}
+
+.lista_listita1{
+    color:$color-secundario;
+    font-size: 12px;
+    list-style:square;
+    list-style-position: inherit;
+    margin-right: 2%;
+    margin-left: 4%;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+
+/* Dirección y redes*/
+.info_necesaria{
+    margin-right: 10%;
+    letter-spacing: 2px;
+    align-items: center;
+}
+
+.info_puntual{
+    align-items: center;
+}
+.info_datos{
+    @include tipografia (16px, bold);
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+.info_gral{
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.fa-location-dot{
+    font-size: 1.3rem;
+}
+.fa-whatsapp{
+    font-size: 1.3rem;
+}
+
+.iconito{
+    font-size: 1.3rem;
+    color: black;
+}
+
+.redicon_{
+    margin: 5%;
+    @include sizes(15%, 15%);
+}
+
+.redicon_1{
+    margin: 5%;
+    @include sizes(14%, 14%);
+}
+
+.ubicacion{
+    margin-right: 100%;
+}
+
+/*Mediaquery*/
+
+@media (min-width: $pantalla-chica) {
+    .background{
+        background-image: url('../Fotos/Fondo.png');
+        background-size: 100%;
+    }
+}
+@media (min-width: $pantalla-mediana) {
+    .background {
+        background-image: url('../Fotos/Fondo.png');
+        background-size: 100%;
+    }
+}
+@media (min-width: pantalla-grande) {
+    .background {
+        background-image: url('../Fotos/Fondo.png');
+        background-size: 100%;
+    }
+}
+
+@media (min-width:$pantalla-chica) {
+    .imagen {
+        background-image: url(../Fotos/fondo1.png);
+        height: 100%;
+        background-size:  100%;
+    }
+}
+@media (min-width: $pantalla-mediana) {
+    .imagen {
+        background-image: url(../Fotos/fondo1.png);
+        height: 100%;
+        background-size:  100%;
+    }
+}
+@media (min-width: $pantalla-grande) {
+    .imagen {
+        background-image: url(../Fotos/fondo1.png);
+        height: 100%;
+        background-size:  100%;
+    }
+}
+
+@media screen and (max-width: $pantalla-mediana){
+    .tituloprincipal{
+    font-size:20px;
+    }
+
+    .invitacion{
+    font-size:12px;
+    line-height: 1rem;
+    margin-top: 5% ;
+    margin-bottom: 2%;
+    }
+}
+
+    @media screen and (max-width: $pantalla-chica ){
+    .tituloprincipal{
+    font-size:9px;
+    width: 100%;
+    margin-top: 20%;
+    }
+
+    .invitacion{
+    font-size:7px;
+    line-height: 0.7rem;
+    margin-top: 2% ;
+    margin-bottom: 1%;
+    width: 100%;
+    }
+}
+
+@media screen and (max-width: $pantalla-mediana){
+
+    .subtituloayuda{
+    font-size:10px;
+    line-height: 1rem;
+    margin: 5% 20% 2% 0.5%;
+    width: 50%;
+    }
+    
+    .subtituloayuda1{
+    font-size:10px;
+    line-height: 1rem;
+    margin: 5% 20% 2% 0.5%;
+    width: 50%;
+    }
+}
+
+@media screen and (max-width: $pantalla-chica){
+
+    .subtituloayuda{
+    font-size:10px;
+    line-height: 0.7rem;
+    margin: 5% 20% 2% 0.5%;
+    width: 50%;
+    }
+    
+
+    .subtituloayuda1{
+    font-size:10px;
+    line-height: 0.7rem;
+    margin: 5% 20% 2% 0.5%;
+    width: 50%;
+    }
+}
+
+@media screen and (max-width: $pantalla-mediana){
+    .tepodemosayudar{
+    font-size:20px;
+    margin-bottom: 0.2%;
+    }
+
+    .lista{
+        margin: 0% auto 20% 4%;
+        padding-bottom: 8%;
+        @include sizes(70%, 10%);
+    }
+
+    .lista_listita1{
+    font-size:8px;
+    line-height: 0.8rem;
+    margin-top: 0.5% ;
+    margin-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: $pantalla-chica){
+
+    .lista{
+        margin: 0% auto 20% 4%;
+        padding-bottom: 8%;
+        width: 70%;
+        height: 10%;
+    }
+    .tepodemosayudar{
+    font-size:10px;
+    width: 70%;
+    margin-top: 0.5%;
+    margin-right: 3% ;
+    margin-bottom: 0.2%;
+    padding: 3.5%;
+    }
+
+    .lista_listita1{
+    font-size:5px;
+    line-height: 0.4rem;
+    margin: 0.5% 1% 0% 1%;
+    width: auto;
+    }
+}
+
+
+@media (max-width: $pantalla-chica){
+    .card1{
+        border-radius: $radius-card; 
+        width: 80%;
+        margin: 5rem 0 3rem 2rem;
+        background-color: $color-secundario;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    }
+
+    .img{
+        @include sizes(25%,20%);
+        margin-top: 2rem;
+        margin-bottom: 2rem;  
+    }
+    
+    .img1{
+        @include sizes(22%, 15%);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card1_titulo5{
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    .card1_texto{
+        font-weight: medium;
+        font-style: normal;
+        text-align: center;
+    }
+}
+
+@media(min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
+    .card{
+        width: 45%;
+        margin-left: 15rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}

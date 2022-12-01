@@ -1,0 +1,349 @@
+/*PAGE SERVICIOS*/
+    
+.titulo_servicios::after{
+    content: '';
+    width: 50px;
+    height: 2.5px;
+    background-color: $color-principal;
+    position: absolute;
+    left: 120px;
+    bottom: -8px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.tratamientos_listas{
+    @include flex-justify-center;
+}
+
+.div_listas{
+    @include flex-justify-center;
+    background-color:  $color-principal;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: none;
+    margin: 0.5rem 5rem 1rem 1rem;
+    padding: 4px;
+    @include sizes(50%, 50%);
+}
+
+.lista_tratamientos{
+    margin: 3rem 3rem 3rem 3rem;
+    line-height: 2rem;
+    color: $color-secundario;
+    font-size: 15px;
+}
+
+.titulo_div-servicios{
+    @include tipografia (35px, bold);
+    color: #ca9fda;
+    margin-bottom: 10%;
+    margin-top: 25%;
+    text-align: center;
+}
+
+.subtitulo_servicios{
+    @include tipografia (14px, bold);
+    letter-spacing: 2px;
+    line-height: 2rem;
+    justify-content: center;
+    width: 30rem;
+}
+
+.titulo_servicios_{
+    @include tipografia (25px, bold);
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.card_pasos{
+    border-style: solid;
+    border-radius: $radius-card; 
+    border-color: $color-principal;
+    width: 65%;
+    margin: 5rem 1rem 3rem 4rem;  
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cardpasos_titulo{
+    @include tipografia (18px, bold);
+    @extend .cards-titulo;
+}
+
+.cardpasos_texto{
+    @include tipografia (15px, lighter);
+    font-style: italic;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 1rem 0 1rem;
+}
+.icon_pasos{
+    font-size: 45px;
+    color: $color-hover;
+    padding: 30px 50px 30px 100px;
+}
+
+/*Media query*/
+
+@media (max-width: $pantalla-chica){
+
+    .titulo_servicios{
+    font-size: 22px;
+    margin: 0rem 0rem 4rem 7rem;
+    }
+
+    .titulo_servicios::after{
+        content: '';
+        width: 50px;
+        height: 2.5px;
+        background-color: $color-principal;
+        position: absolute;
+        left: 120px;
+        bottom: -8px;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+    .titulo_servicios_{
+        @include tipografia (22px, bold);
+        margin: 4rem 2rem 4rem 4rem;
+        text-align: center;
+    }
+
+    .tratamientos_listas{
+        display: block;
+    }
+    
+    .div_listas{
+        @include flex-justify-center;
+        background-color:  $color-principal;
+        box-sizing: border-box;
+        border-radius: 15px;
+        border: none;
+        margin: 0.5rem 5rem 1rem 1rem;
+        padding: 4px;
+        @include sizes(90%, 30%);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .lista_tratamientos{
+        margin: 2rem 3rem 2rem 3rem;
+        line-height: 2rem;
+        width: 10rem;
+        color: $color-secundario;
+        font-size: 11px;
+    }
+
+    .titulo_div-servicios{
+        @include tipografia (25px, bold);
+        color: #ca9fda;
+        margin-bottom: 10%;
+        margin-top: 25%;
+        text-align: center;
+    }
+    
+    .subtitulo_servicios{
+        @include tipografia (12px, bold);
+        letter-spacing: 2px;
+        line-height: 2rem;
+        text-align: center;
+        width: 20rem;
+        margin-left: 6rem;
+        margin-bottom: 7rem;
+    }
+
+    .card_pasos{
+        border-style: solid;
+        border-radius: $radius-card; 
+        border-color: $color-principal;
+        width: 70%;
+        margin: 5rem 1rem 3rem 2rem;  
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cardpasos_titulo{
+        @include tipografia (15px, bolder);
+        @extend .cards-titulo;
+    }
+    
+    .cardpasos_texto{
+        @include tipografia (14px, medium);
+        font-style: italic;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0 1rem 0 1rem;
+    }
+    .icon_pasos{
+        font-size: 35px;
+        color: $color-hover;
+        padding: 30px 60px 30px 55px;
+    }
+
+    .card1_{
+        border-radius: $radius-card; 
+        width: 80%;
+        margin: 5rem 0 3rem 2rem;
+        background-color: $color-secundario;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    }
+
+    .img1{
+        @include sizes(25%,20%);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        
+    }
+    
+    .img11{
+        @include sizes(22%, 15%);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card1_titulo5_{
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    .card1_texto_{
+        font-weight: medium;
+        font-style: normal;
+        text-align: center;
+        }
+}
+
+@media(min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
+
+    .titulo_servicios{
+    font-size: 25px;
+    margin:0rem 0rem 4rem 15rem;
+    }
+
+    .titulo_servicios::after{
+        content: '';
+        width: 50px;
+        height: 2.5px;
+        background-color: $color-principal;
+        position: absolute;
+        left: 120px;
+        bottom: -8px;
+        margin: 0 auto;
+        border-radius: 30px;
+    }
+
+    .titulo_servicios_{
+        @include tipografia (22px, bold);
+        margin: 4rem 2rem 4rem 4rem;
+        text-align: center;
+    }
+
+    .tratamientos_listas{
+        display: block;
+    }
+    
+    .div_listas{
+        @include flex-justify-center;
+        background-color:  $color-principal;
+        box-sizing: border-box;
+        border-radius: 15px;
+        border: none;
+        margin: 0.5rem 1rem 1rem 3rem;
+        padding: 4px;
+        @include sizes(90%, 30%);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .lista_tratamientos{
+        margin: 2rem 1rem 2rem 1rem;
+        line-height: 2rem;
+        width: 20rem;
+        color: $color-secundario;
+        font-size: 13px;
+    }
+
+    .titulo_div-servicios{
+        @include tipografia (28px, bold);
+        color: #ca9fda;
+        margin-bottom: 10%;
+        margin-top: 15%;
+        text-align: center;
+    }
+    
+    .subtitulo_servicios{
+        @include tipografia (15px, bold);
+        letter-spacing: 2px;
+        line-height: 2rem;
+        text-align: center;
+        width: 30rem;
+        margin-left: 10rem;
+        margin-bottom: 7rem;
+    }
+
+    .card_pasos{
+        border-style: solid;
+        border-radius: $radius-card; 
+        border-color: $color-principal;
+        width: 70%;
+        margin: 5rem 1rem 3rem 2rem;  
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cardpasos_titulo{
+        @include tipografia (15px, bolder);
+    }
+    
+    .cardpasos_texto{
+        @include tipografia (14px, medium);
+        font-style: italic;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0 1rem 0 1rem;
+    }
+    .icon_pasos{
+        font-size: 35px;
+        color: $color-hover;
+        padding: 30px 60px 30px 55px;
+    }
+
+    .card1_{
+        border-radius: $radius-card; 
+        width: 65%;
+        margin: 5rem 0 2rem 4rem;
+        background-color: $color-secundario;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    }
+
+    .img1{
+        @include sizes(25%,20%);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        
+    }
+    
+    .img11{
+        @include sizes(22%, 15%);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card1_titulo5_{
+        font-size: 18px;
+        letter-spacing: 0.4px;
+    }
+
+    .card1_texto_{
+        @include sizes(20px,medium);
+        font-weight: medium;
+        font-style: medium;
+        text-align: center;
+        width: 85%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        
+        }
+}
+  

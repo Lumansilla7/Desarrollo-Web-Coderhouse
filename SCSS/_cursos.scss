@@ -1,0 +1,160 @@
+/* PAGE CURSOS*/
+
+.info_cursos{
+    @include flex-justify-spacebetween;
+    margin: 0rem 2rem 6rem 6rem;
+}
+
+.info1{ 
+    width: 55%;
+    border-color: $color-secundario;
+    border-style: solid;
+    margin-left: 3rem;
+    margin-right: 10rem;
+}
+
+.iconos2{
+    font-size: 45px;
+    color:#e1b8f0;
+    margin-left: 38%;
+    margin-top: 10%;
+}
+
+.texto{
+    @include tipografia (12px, bold);
+    font-style: italic;
+    text-align: center;
+    color: #ca9fda;
+    margin-top: 3rem ;
+    box-sizing: border-box;
+    margin: 3rem 1rem 3rem 1rem;
+}
+
+.cursos{
+    @include flex-justify-spacebetween;
+}
+
+.card2{
+    border-radius: $radius-card;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    @include sizes(70%, 100%);
+    background-color: $color-secundario;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+}
+
+.col{
+    margin-bottom: 9rem;
+}
+
+.card2_img{ 
+    @include sizes(80%, 12rem);
+    border-radius: $radius-card; 
+    margin-left: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 4%;
+}
+
+.card2_titulo{
+    @include tipografia (1.3rem, bold);
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.card2_subtitulo{
+    @include tipografia (13px, lighter);
+    font-style: italic;
+    color: $color-principal;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.card2_texto{
+    @extend .cards-texto;
+    width: 85%;
+    margin: 0.5rem 5rem 2rem 2rem;
+    font-style: inherit;
+    text-align: left;
+}
+
+.card2_precioviejo{
+    font-weight: lighter;
+    text-decoration: line-through;
+    color:rgb(121, 110, 110);
+    margin: 2px 0px 4px 20px;
+}
+
+.card2_precioactual{
+    margin: 2px 0px 6px 20px;
+    @include tipografia (17px, bolder);
+    color:$color-principal;
+}
+
+.boton_compra{
+    @extend .botones-generales;
+    letter-spacing: 1px;
+    padding: 0.7rem 5rem 0.7rem 5rem;
+    border-radius: $radius-boton;
+    margin: 20px 20px 20px 40px;
+    transition: all 1s;
+}
+
+.boton_compra:hover{
+    background-color: $color-hover;
+}
+
+.form_titulos{
+    width: 100%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.8rem;
+    color:rgb(121, 110, 110);
+    font-size:medium;
+    font-style:inherit;
+}
+
+.botontitulos{
+    color:$color-secundario;
+    background-color: $color-principal;
+    border: none;
+    border-radius: $radius-boton;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    transition: all 1s;
+}
+
+.botontitulos:hover{
+    background-color:$color-hover;
+}
+
+
+/*Mediaquery*/
+
+@media (min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
+    .cursos{
+        width: 75%;
+        margin-left: 8rem ;
+    }
+
+    .info_cursos{
+        margin-left:12rem;
+    }
+}
+
+@media (max-width: $pantalla-chica){
+    .cursos{
+        width: 100%;
+        margin-left: 1rem ;
+        margin-right: 10px;
+    }
+
+    .boton_compra{
+        padding: 1rem 4rem 1rem 4rem;
+    }
+}
+
