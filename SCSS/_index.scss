@@ -11,8 +11,8 @@
 
 .tituloprincipal{
     @include tipografia (28px, lighter);
-    margin-left: 10%;
-    margin-top: 6%;
+    margin-left: 7%;
+    margin-top: 8%;
     margin-bottom: 2%;
     letter-spacing: 2.5px;
 }
@@ -28,6 +28,7 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-right: 40%;
+    margin-left: 5%;
     margin-top: 5% ;
     margin-bottom: 10%;
     @include tipografia (19px, lighter);
@@ -37,17 +38,28 @@
 
 /* Nuestros servicios*/
 .titulo{
-font-weight: bold;
-text-align: center;
-font-size: $size-titulos;
-letter-spacing: 2px;
-padding-top: 5rem;
-margin-bottom: 0.05rem;
-position: relative;
-width: 300px;
-margin: 0 auto 5rem auto;
+    font-weight: bold;
+    text-align: center;
+    font-size: $size-titulos;
+    letter-spacing: 2px;
+    padding-top: 5rem;
+    margin-bottom: 0.05rem;
+    position: relative;
+    width: 300px;
+    margin: 0 auto 5rem auto;
 }
 
+.image_back{
+    background-image: url(../Fotos/Background.png);
+    background-size: 99.9%;
+    background-repeat: no-repeat;
+    background-position: bottom center ;
+    @include sizes(100%, 100%);
+}
+
+.nada_titulo{
+    color: #996EDD;
+}
 .titulo::after{
     content: '';
     @include sizes(50px, 2.5px);
@@ -114,17 +126,17 @@ margin: 0 auto 5rem auto;
     grid-template-columns: 3fr 2fr ;
     grid-template-rows: 500px;
     column-gap: 100px;
-    }
+}
 
 .services{
-    @include tipografia (18px, bold);
+    @include tipografia (19px, bold);
     letter-spacing: 1px;
     margin:  2rem 0 2rem 120px;
     padding-top: 0.1rem;
 }
 
 .fa-circle-check{
-    color:$color-principal ;
+    color:#996EDD ;
     font-size: 1.5rem;
 }
 
@@ -133,9 +145,10 @@ margin: 0 auto 5rem auto;
 }
 
 .image{
-    @include sizes(80%, 80%);
-    position: absolute;
+    @include sizes(85%, 90%);
+    position: relative;
     left: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .nuestroservicios{
@@ -146,34 +159,71 @@ margin: 0 auto 5rem auto;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr;
     grid-template-rows: 410px;
-    column-gap: 10px;
-    }
+    column-gap: 5px;
+    margin-left: 10rem;
+    margin-right: 5rem;
+}
+
+
+/*Media queries index*/
 
 @media screen and (max-width: $pantalla-chica ) {
     .grid{
         grid-template-columns: 1fr;
         grid-template-rows: 280px;
     }
+
     .grid1{
         grid-template-columns: 1fr;
-        grid-template-rows: 340px;
+        grid-template-rows: 430px;
     }
+
     .services{
-        @include tipografia (15px, bold);
+        @include tipografia (14px, bold);
         letter-spacing: 1px;
         margin:  2rem 0 2rem 2rem;
         padding-top: 0.1rem;
+        width: 95%;
+    }
+
+    .image_back{
+        background-size: 99.9%;
+    }
+
+    .image{
+        width: 68%;
+        height: 75%;
+        margin-bottom: 1rem;
+        margin-left: 4rem;
+    }
+
+    .titulo_nuestroserv{
+        font-size: 18px;
+    }
+
+    .card1{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    }
+
+    .boton_especial{
+        margin-bottom: 0.5rem;
+    }
 }
-}
-@media screen and (max-width: $pantalla-mediana) {
+
+@media(min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
     .grid{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 400px;
     }
+    
     .grid1 {
         grid-template-columns: 4fr 4fr;
         grid-template-rows: 450px 450px;
-        column-gap: 2px;
+        column-gap: 15px;
+        row-gap:3rem;
+        margin-left: 1.5rem;
+        margin-bottom: 5rem;
     }
 
     .services{
@@ -181,13 +231,13 @@ margin: 0 auto 5rem auto;
         letter-spacing: 1px;
         margin:  2rem 0 2rem 2rem;
         padding-top: 0.1rem;
-}
+    }
 }
 
 .card1{
     border-radius: $radius-card; 
-    width: 70%;
-    margin: 5rem 0 3rem 4rem;
+    @include sizes(70%, 90%);
+    margin: 5rem 0 3rem 0rem;
     background-color: $color-secundario;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
@@ -200,6 +250,7 @@ margin: 0 auto 5rem auto;
 .visually-hidden{
     color: black;
 }
+
 .whatsapp{
     position: fixed;
     padding: 0.6rem;
@@ -216,7 +267,7 @@ margin: 0 auto 5rem auto;
 }
 
 .card1_titulo5{
-    @include tipografia (15px, bold);
+    @include tipografia (16px, bold);
     @extend .cards-titulo;
 }
 
@@ -230,7 +281,9 @@ margin: 0 auto 5rem auto;
 }
 
 /*Sobre nosotros*/
-
+.titulo_sobrenosotros{
+    margin-top: 7rem;
+}
 .quienesomos{
     @include flex-justify-spacearound;
 }
@@ -238,25 +291,27 @@ margin: 0 auto 5rem auto;
 .card{
     border-radius: $radius-card;
     border-style: solid light;
-    width: 70%;
+    width: 62%;
     background-color: $color-secundario;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-    margin-bottom: 10rem;
-    margin-left: 5rem;
+    margin: 5rem 5rem 3rem 7rem;
 }
 
 .card_nombre{ 
-    @include tipografia (20px, normal);
+    @include tipografia (17px, bold);
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
     padding: 0.5rem;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color:#996EDD;
 }
 
 .card_textodescriptivo{
     @extend .cards-texto;
-    width: 100%;
+    width: 90%;
     margin-bottom: 2rem; 
+    margin-left: 1rem;
     box-sizing: border-box;
     padding: 0 1rem;
     font-style: italic;
@@ -321,7 +376,7 @@ margin: 0 auto 5rem auto;
 
 .lista_listita1{
     color:$color-secundario;
-    font-size: 12px;
+    font-size: 15.3px;
     list-style:square;
     list-style-position: inherit;
     margin-right: 2%;
@@ -331,6 +386,11 @@ margin: 0 auto 5rem auto;
 }
 
 /* Dirección y redes*/
+
+.subtitulo_contacto{
+    font-size: 10px;
+}
+
 .info_necesaria{
     margin-right: 10%;
     letter-spacing: 2px;
@@ -354,6 +414,7 @@ margin: 0 auto 5rem auto;
 .fa-location-dot{
     font-size: 1.3rem;
 }
+
 .fa-whatsapp{
     font-size: 1.3rem;
 }
@@ -373,168 +434,102 @@ margin: 0 auto 5rem auto;
     @include sizes(14%, 14%);
 }
 
+.redicon_:hover{
+    transform: scale(1.3);
+} 
+
+.redicon_1:hover{
+    transform: scale(1.3);
+} 
+
 .ubicacion{
     margin-right: 100%;
 }
 
-/*Mediaquery*/
+/*Mediaquery index*/
 
-@media (min-width: $pantalla-chica) {
+@media (max-width: $pantalla-chica) {
     .background{
         background-image: url('../Fotos/Fondo.png');
         background-size: 100%;
+        height: 100%;
     }
-}
-@media (min-width: $pantalla-mediana) {
-    .background {
-        background-image: url('../Fotos/Fondo.png');
-        background-size: 100%;
-    }
-}
-@media (min-width: pantalla-grande) {
-    .background {
-        background-image: url('../Fotos/Fondo.png');
-        background-size: 100%;
-    }
-}
 
-@media (min-width:$pantalla-chica) {
     .imagen {
         background-image: url(../Fotos/fondo1.png);
         height: 100%;
         background-size:  100%;
     }
-}
-@media (min-width: $pantalla-mediana) {
-    .imagen {
-        background-image: url(../Fotos/fondo1.png);
-        height: 100%;
-        background-size:  100%;
-    }
-}
-@media (min-width: $pantalla-grande) {
-    .imagen {
-        background-image: url(../Fotos/fondo1.png);
-        height: 100%;
-        background-size:  100%;
-    }
-}
 
-@media screen and (max-width: $pantalla-mediana){
     .tituloprincipal{
-    font-size:20px;
+        font-size:10px;
+        width: 100%;
+        margin-top: 12%;
     }
 
     .invitacion{
-    font-size:12px;
-    line-height: 1rem;
-    margin-top: 5% ;
-    margin-bottom: 2%;
-    }
-}
-
-    @media screen and (max-width: $pantalla-chica ){
-    .tituloprincipal{
-    font-size:9px;
-    width: 100%;
-    margin-top: 20%;
-    }
-
-    .invitacion{
-    font-size:7px;
-    line-height: 0.7rem;
-    margin-top: 2% ;
-    margin-bottom: 1%;
-    width: 100%;
-    }
-}
-
-@media screen and (max-width: $pantalla-mediana){
-
-    .subtituloayuda{
-    font-size:10px;
-    line-height: 1rem;
-    margin: 5% 20% 2% 0.5%;
-    width: 50%;
+        font-size:10px;
+        line-height: 0.9rem;
+        margin-top: 2% ;
+        margin-bottom: 1%;
+        width: 100%;
     }
     
-    .subtituloayuda1{
-    font-size:10px;
-    line-height: 1rem;
-    margin: 5% 20% 2% 0.5%;
-    width: 50%;
-    }
-}
-
-@media screen and (max-width: $pantalla-chica){
-
     .subtituloayuda{
-    font-size:10px;
-    line-height: 0.7rem;
-    margin: 5% 20% 2% 0.5%;
-    width: 50%;
+        font-size:10px;
+        line-height: 0.7rem;
+        margin: 5% 20% 2% 0.5%;
+        width: 50%;
     }
-    
 
     .subtituloayuda1{
-    font-size:10px;
-    line-height: 0.7rem;
-    margin: 5% 20% 2% 0.5%;
-    width: 50%;
+        font-size:10px;
+        line-height: 0.7rem;
+        margin: 5% 20% 2% 0.5%;
+        width: 50%;
     }
-}
 
-@media screen and (max-width: $pantalla-mediana){
-    .tepodemosayudar{
-    font-size:20px;
-    margin-bottom: 0.2%;
+    .background{
+        height: 100%;
+        width: 100%;
     }
 
     .lista{
         margin: 0% auto 20% 4%;
         padding-bottom: 8%;
-        @include sizes(70%, 10%);
-    }
-
-    .lista_listita1{
-    font-size:8px;
-    line-height: 0.8rem;
-    margin-top: 0.5% ;
-    margin-bottom: 2%;
-    }
-}
-
-@media screen and (max-width: $pantalla-chica){
-
-    .lista{
-        margin: 0% auto 20% 4%;
-        padding-bottom: 8%;
-        width: 70%;
+        width: 80%;
         height: 10%;
     }
+
     .tepodemosayudar{
     font-size:10px;
     width: 70%;
-    margin-top: 0.5%;
+    margin-top: 0.2%;
     margin-right: 3% ;
-    margin-bottom: 0.2%;
+    margin-bottom: 0.1%;
     padding: 3.5%;
     }
 
     .lista_listita1{
-    font-size:5px;
-    line-height: 0.4rem;
-    margin: 0.5% 1% 0% 1%;
-    width: auto;
+    font-size:6px;
+    line-height: 0.6rem;
+    margin: 0% 1% 0% 1%;
+    width: 100%;
     }
-}
+    
+    .nuestroservicios{
+        margin-left:4rem;
+    }
 
-
-@media (max-width: $pantalla-chica){
+    .whatsapp{
+        width: 9.5%;
+        height: 5%;
+    }
     .card1{
         border-radius: $radius-card; 
-        width: 80%;
-        margin: 5rem 0 3rem 2rem;
+        width: 90%;
+        height: 94%;
+        margin: 5rem 0 5rem 2rem;
         background-color: $color-secundario;
         box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     }
@@ -561,6 +556,10 @@ margin: 0 auto 5rem auto;
         font-style: normal;
         text-align: center;
     }
+
+    .subtitulo_contacto{
+        margin-left: 2rem;
+    }
 }
 
 @media(min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
@@ -569,5 +568,83 @@ margin: 0 auto 5rem auto;
         margin-left: 15rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+
+    .background {
+        background-image: url('../Fotos/Fondo.png');
+        background-size: 100%;
+    }
+
+    .tituloprincipal{
+        font-size:20px;
+    }
+    
+    .invitacion{
+        font-size:12px;
+        line-height: 1rem;
+        margin-top: 5% ;
+        margin-bottom: 2%;
+    }
+
+    .subtituloayuda{
+        font-size:10px;
+        line-height: 1rem;
+        margin: 5% 20% 2% 0.5%;
+        width: 50%;
+    }
+
+    .subtituloayuda1{
+        font-size:10px;
+        line-height: 1rem;
+        margin: 5% 20% 2% 0.5%;
+        width: 50%;
+    }
+
+    .tepodemosayudar{
+        font-size:20px;
+        margin-bottom: 0.2%;
+    }
+    
+    .lista{
+        margin: 0% auto 20% 4%;
+        padding-bottom: 8%;
+        @include sizes(70%, 10%);
+    }
+    
+    .lista_listita1{
+        font-size:8px;
+        line-height: 0.8rem;
+        margin-top: 0.5% ;
+        margin-bottom: 2%;
+    }
+    
+    .imagen {
+        background-image: url(../Fotos/fondo1.png);
+        height: 100%;
+        background-size:  100%;
+    }
+}
+
+@media (min-width: $pantalla-mediana) and (max-width: $pantalla-grande) {
+    .background {
+        background-image: url('../Fotos/Fondo.png');
+        background-size: 100%;
+    }
+
+    .imagen {
+        background-image: url(../Fotos/fondo1.png);
+        height: 100%;
+        background-size:  100%;
+    }
+
+    .card1{
+        width: 90%;
+        height: 100%;
+    }
+
+    .lista_listita1{
+        margin-top: 0.5rem;
+        line-height: 1.4rem;
+        margin-top: 0.1rem;
     }
 }

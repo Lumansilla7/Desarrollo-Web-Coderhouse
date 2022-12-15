@@ -12,6 +12,14 @@
     border-radius: 30px;
 }
 
+.texto_unico{
+    margin-bottom: 3.4rem;
+}
+
+.nuestroservicios_{
+    margin-bottom: 4rem;
+}
+
 .tratamientos_listas{
     @include flex-justify-center;
 }
@@ -36,7 +44,7 @@
 
 .titulo_div-servicios{
     @include tipografia (35px, bold);
-    color: #ca9fda;
+    color: #996EDD;
     margin-bottom: 10%;
     margin-top: 25%;
     text-align: center;
@@ -62,8 +70,8 @@
     border-style: solid;
     border-radius: $radius-card; 
     border-color: $color-principal;
-    width: 65%;
-    margin: 5rem 1rem 3rem 4rem;  
+    @include sizes(65%, 80%);
+    margin: 5rem 1rem 3rem 3rem;  
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -78,17 +86,22 @@
     font-style: italic;
     text-align: center;
     box-sizing: border-box;
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem 2rem 1rem;
 }
+
 .icon_pasos{
     font-size: 45px;
     color: $color-hover;
-    padding: 30px 50px 30px 100px;
+    padding: 30px 50px 30px 70px;
 }
 
-/*Media query*/
+/*Media query Page servicios*/
 
 @media (max-width: $pantalla-chica){
+    .nuestroservicios_{
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+    }
 
     .titulo_servicios{
     font-size: 22px;
@@ -106,6 +119,7 @@
         margin: 0 auto;
         border-radius: 30px;
     }
+
     .titulo_servicios_{
         @include tipografia (22px, bold);
         margin: 4rem 2rem 4rem 4rem;
@@ -158,10 +172,14 @@
         border-style: solid;
         border-radius: $radius-card; 
         border-color: $color-principal;
-        width: 70%;
+        width: 90%;
         margin: 5rem 1rem 3rem 2rem;  
         align-items: center;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card_pasosesion{
+        height: 80%;
     }
     
     .cardpasos_titulo{
@@ -174,18 +192,19 @@
         font-style: italic;
         text-align: center;
         box-sizing: border-box;
-        margin: 0 1rem 0 1rem;
+        margin: 0 1rem 3rem 1rem;
     }
+
     .icon_pasos{
         font-size: 35px;
         color: $color-hover;
-        padding: 30px 60px 30px 55px;
+        padding: 30px 30px 30px 80px;
     }
 
     .card1_{
         border-radius: $radius-card; 
         width: 80%;
-        margin: 5rem 0 3rem 2rem;
+        margin: 5rem 0 2rem 2rem;
         background-color: $color-secundario;
         box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     }
@@ -194,7 +213,6 @@
         @include sizes(25%,20%);
         margin-top: 2rem;
         margin-bottom: 2rem;
-        
     }
     
     .img11{
@@ -212,14 +230,24 @@
         font-weight: medium;
         font-style: normal;
         text-align: center;
-        }
+    }
+
+    .card__{
+        margin-right: 8rem;
+        margin-left: 8rem;
+    }
+
+    .redes_titulo{
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 @media(min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
 
-    .titulo_servicios{
+    .titulo_servicios__{
     font-size: 25px;
-    margin:0rem 0rem 4rem 15rem;
+    margin:8rem 0rem 4rem 15rem;
     }
 
     .titulo_servicios::after{
@@ -286,7 +314,7 @@
         border-style: solid;
         border-radius: $radius-card; 
         border-color: $color-principal;
-        width: 70%;
+        width: 90%;
         margin: 5rem 1rem 3rem 2rem;  
         align-items: center;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -301,18 +329,19 @@
         font-style: italic;
         text-align: center;
         box-sizing: border-box;
-        margin: 0 1rem 0 1rem;
+        margin: 0 1.5rem 0 1.5rem;
     }
     .icon_pasos{
         font-size: 35px;
         color: $color-hover;
-        padding: 30px 60px 30px 55px;
+        padding: 30px 50px 30px 70px;
     }
 
-    .card1_{
+    .card1{
         border-radius: $radius-card; 
-        width: 65%;
-        margin: 5rem 0 2rem 4rem;
+        width: 80%;
+        height: 100%;
+        margin: 5rem 2rem 2rem 2rem;
         background-color: $color-secundario;
         box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
     }
@@ -345,5 +374,65 @@
         margin-right: 1rem;
         
         }
+
+    .card__{
+        width: 60%;
+        margin-bottom: 2rem;
+        margin-left:9rem;
+    }
+
+    .nuestroservicios_{
+        grid-template-columns: 4fr 4fr;
+        grid-template-rows: 480px 480px;
+        column-gap: 2px;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+    .redes_titulo{
+        font-size: 22px;
+    }
+
+    .redes{
+        margin-left: 20rem;
+    }
+
+    .redes1{
+        @include sizes(20px, 22px);
+        align-items:center;
+        margin-left: 1rem ;
+        margin-right: 1.5rem ;
+    }
+    .redes2{
+        @include sizes(19px,19px);
+        align-items:center;
+        margin-left: 1rem ;
+        margin-right: 1.5rem ;
+    }
 }
-  
+
+@media (min-width: $pantalla-mediana) and (max-width: $pantalla-grande){
+    
+    .nuestroservicios_{
+        width: 100%;
+        margin-right: 2rem;
+        margin-left: 0.2rem;
+    }
+    .card1_{
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+    .card1_texto_{
+        text-align: left;
+    }
+    .card__{
+        margin-left: 0.2rem;
+        width: 100%;
+    }
+
+    .card_pasos{
+        @include sizes(75%,90%);
+        margin-left: 0.2rem;
+    }
+}

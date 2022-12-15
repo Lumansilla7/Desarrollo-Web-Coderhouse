@@ -1,5 +1,22 @@
 /* PAGE CURSOS*/
 
+.intro_{
+    @include flex-justify-spacebetween;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.imagen_mitad{
+    @include sizes(35%, 10%);
+}
+
+.intro_cursos{
+    @include tipografia (16px,bold);
+    width: 50%;
+    margin: 0.1rem 15rem 5rem 5rem;
+    line-height: 3rem;
+}
+
 .info_cursos{
     @include flex-justify-spacebetween;
     margin: 0rem 2rem 6rem 6rem;
@@ -15,23 +32,32 @@
 
 .iconos2{
     font-size: 45px;
-    color:#e1b8f0;
-    margin-left: 38%;
+    color:$color-principal;
+    margin-left: 40%;
     margin-top: 10%;
+}
+
+.titulo_online{
+    @include tipografia (15px, bolder);
+    text-align: center;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    color: $color-principal;
 }
 
 .texto{
     @include tipografia (12px, bold);
     font-style: italic;
     text-align: center;
-    color: #ca9fda;
-    margin-top: 3rem ;
+    color: #996EDD;
+    margin-top: 1rem ;
     box-sizing: border-box;
-    margin: 3rem 1rem 3rem 1rem;
+    margin: 1rem 1rem 3rem 1rem;
 }
 
 .cursos{
     @include flex-justify-spacebetween;
+    margin-left: 4rem;
 }
 
 .card2{
@@ -89,6 +115,13 @@
     margin: 2px 0px 4px 20px;
 }
 
+.precioviejo__{
+    margin-top: 3.8rem;
+}
+
+.precioviejo_{
+    margin-top: 5.4rem;
+}
 .card2_precioactual{
     margin: 2px 0px 6px 20px;
     @include tipografia (17px, bolder);
@@ -133,7 +166,19 @@
 }
 
 
-/*Mediaquery*/
+/*Mediaquery Cursos*/
+
+@media (max-width:$pantalla-chica) {
+
+    .intro_cursos{
+        @include tipografia (14px,bold);
+        width: 80%;
+        margin: 0.1rem 5rem 1rem 2rem;
+        line-height: 2rem;
+    }
+}
+
+
 
 @media (min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
     .cursos{
@@ -158,3 +203,21 @@
     }
 }
 
+@media (min-width: $pantalla-mediana) and (max-width: $pantalla-grande){
+    
+    .cursos{
+        width: 100%;
+        margin-left: 0.1rem;
+        margin-right: 4rem;
+    }
+
+    .card2{
+        width: 95%;
+        margin-right: 4rem;
+        margin-left: 0.5rem;
+    } 
+
+    .old_price{
+        margin-top:4rem;
+    }
+}

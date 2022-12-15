@@ -1,13 +1,13 @@
 /*PAGE NOSOTROS*/
 
 .texto_{
-    color:$color-principal;
-    @include tipografia (13px, bolder);
+    color:black;
+    @include tipografia (15px, bold);
     letter-spacing: 1px;
-    margin-bottom: 5rem;
-    margin-left: 22rem;
-    width: 55%;
-    text-align: center;
+    margin: 2rem 30rem 8rem 50rem;
+    width: 45%;
+    text-align: left;
+    line-height: 2.5rem;
 }
 
 .card-info{
@@ -28,7 +28,7 @@
 .card_img11{
     @include sizes(8rem, 8rem);
     margin-left: 3px;
-    }
+}
 
 .card-info-puntual{
     box-sizing: border-box;
@@ -36,7 +36,7 @@
     @include flex-justify-center;
     flex-direction: column;
     line-height: 30px;
-    }
+}
 
 .card_nombre11{
     @include tipografia (16px, bold);
@@ -60,7 +60,6 @@
     margin-right: 4px;  
 }
 
-
 .boton_perfil{
     @extend .botones-generales;
     border-radius: $radius-boton;
@@ -73,10 +72,12 @@
 .boton_perfil:hover{
     background-color:$color-hover;
 }
+
 .card_mail{
     font-weight: normal;
     font-style: italic;
 }
+
 .card_linkedin{
     font-weight: normal;
     font-style:italic;
@@ -88,6 +89,7 @@
     text-align: center;
     letter-spacing: 1.7px;
     font-weight: bold;
+    color: #996EDD;
 }
 
 .redes{
@@ -116,7 +118,7 @@
     transform: scale(1.3);
 }
 
-/*Media queries*/
+/*Media queries Page nosotros*/
 
 @media screen and (max-width: $pantalla-chica){
 
@@ -126,24 +128,30 @@
         margin-left: 10%;
     }
 
-    .redes1{
-        @include sizes(20px, 22px);
-        align-items:center;
-        margin-left: 1rem ;
-        margin-right: 1.5rem ;
+    .redes{
+        margin-left:9.5rem;
     }
-    .redes2{
-        @include sizes(19px,19px);
+
+    .redes1{
+        @include sizes(22px, 22px);
         align-items:center;
         margin-left: 1rem ;
         margin-right: 1.5rem ;
     }
 
+    .redes2{
+        @include sizes(19px,19px);
+        align-items:center;
+        margin-left: 1rem ;
+        margin-right: 2rem ;
+    }
+
     .texto_{
         @include tipografia (12px, bold);
         text-align: center;
-        margin: 7rem 20rem 8rem 7rem;
+        margin: 7rem 25rem 8rem 5rem;
         width: 70%;
+        line-height: 25px;
     }
 
     .quienesomos1{
@@ -151,12 +159,14 @@
         justify-content:center;
         align-items: center;
     }
+
     .card-info{
         @include sizes (100%, 100%);
         border-radius: 20px;
-        margin-left: 1rem;
+        margin-left:0.4rem;
         margin-bottom: 4rem;
         color:black;
+        width:98%;
     }
 
     .card-text-desc{
@@ -168,6 +178,7 @@
         margin-top: 1rem;
         margin-right: 1rem;
     }
+
     .card-info-puntual{
         padding: 0 1rem;
         line-height: 20px;
@@ -176,11 +187,9 @@
     
     .card_img11{
         @include sizes(4rem, 4rem);
-        margin-left: 1rem;
+        margin-left: 3rem;
         align-items:flex-start;
-        }
-    
-    
+    }
     
     .card_nombre11{
         @include tipografia (14px, bolder);
@@ -195,20 +204,22 @@
     }
 
     .boton_perfil{
-        font-size: 8px;
+        font-size: 6px;
         background-color: $color-principal;
         font-weight: medium;
         border: none;
         border-radius: $radius-boton;
         padding: 1px 10px 1px 10px;
-        margin: 1px 20px 1px 20px;
+        margin: 1px 28px 1px 10px;
         letter-spacing: 1px;
         transition: all 1s;
     }
+
     .card_mail{
         @include tipografia(10px, medium);
         font-style: italic;
     }
+
     .card_linkedin{
         @include tipografia(10px, medium);
         font-style:italic;
@@ -236,24 +247,30 @@
         margin-bottom: 4rem;
     }
 
+    .redes{
+        margin-left: 20rem;
+    }
+
     .redes1{
         @include sizes(20px, 22px);
         align-items:center;
         margin-left: 1rem ;
         margin-right: 1.5rem ;
     }
+
     .redes2{
         @include sizes(19px,19px);
         align-items:center;
         margin-left: 1rem ;
         margin-right: 1.5rem ;
     }
-
+    
     .texto_{
         @include tipografia (12px, bold);
         text-align: center;
         margin: 7rem 20rem 5rem 7rem;
         width: 70%;
+        line-height: 25px;  
     }
 
     .quienesomos1{
@@ -261,10 +278,11 @@
         justify-content:center;
         align-items: center;
     }
+
     .card-info{
-        @include sizes (100%, 100%);
+        @include sizes (98%, 100%);
         border-radius: 20px;
-        margin-left: 1rem;
+        margin-left: 0.5rem;
         margin-bottom: 4rem;
         color:black;
     }
@@ -284,20 +302,20 @@
         width: 20%;
         height: 10%;
     }
-    
+
     .card_img11{
         @include sizes(8rem, 8rem);
         margin: 1rem 0rem 1rem 0rem;
         align-items:flex-start;
-        }
-    
+    }
+
     .card_nombre11{
         @include tipografia (14px, bolder);
         font-style: oblique;
         text-align:justify;
     }
-    
-    .card_orientacion{
+
+    card_orientacion{
         font-style: italic;
         @include tipografia (10px, bold);
         text-align:left;
@@ -313,12 +331,13 @@
         margin-right: 2px;
         align-items: flex-end;
         transition: all 1s;
-
     }
+
     .card_mail{
         @include tipografia(11px, medium);
         font-style: italic;
     }
+
     .card_linkedin{
         @include tipografia(11px, medium);
         font-style:italic;
@@ -329,7 +348,7 @@
         font-size: 12px;
         margin-right: 2px;
     }
-    
+
     .fa-linkedin-in{
         color:$color-principal;
         font-size: 14px;
@@ -337,5 +356,21 @@
     }
 }
 
+@media (min-width: $pantalla-mediana) and (max-width: $pantalla-grande){
+    
+    .texto_{
+        margin-left:20rem;
+        width: 70%;
+    }
+
+    .card-info{
+        width: 99%;
+        margin-left: 0.5rem;
+    }
+
+    .card_img11{
+        @include sizes(7rem, 6.5rem);
+    }
+}
     
 

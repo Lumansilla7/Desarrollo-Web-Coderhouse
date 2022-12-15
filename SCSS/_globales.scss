@@ -29,6 +29,7 @@ body {
     width: 100%;
     z-index: 9999;
 }
+
 .nav-item{
     font-weight: bold;
     list-style: none;
@@ -44,7 +45,7 @@ body {
     font-weight: lighter;
     margin: 0 2rem;
 }
- 
+
 /*Extends*/
 .botones-generales{
     color:$color-secundario;
@@ -61,7 +62,7 @@ body {
 }
 
 .cards-titulo{
-    color: $color-principal;
+    color: #996EDD;
     text-align: center;
     letter-spacing: 1.5px;
     margin-bottom: 2rem;

@@ -7,6 +7,7 @@
     background-color: $color-secundario;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
+
 .subtitulo{
     @extend .subtitulos-contacto;
     font-size: 15px;
@@ -85,17 +86,20 @@
     margin:10% 8% 20% 0%;
 }
 
+/*Mediaquery Contacto*/
 
 @media (min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
     .formregistro{
         flex-direction: column;
         margin: 3% auto 10% 13%;
     }
+
     .form{
         font-size: 12px;
         width: 50%;
         height: auto;
     } 
+
     .registro{
         width: 90%;
     }
@@ -134,11 +138,13 @@
         flex-direction: column;
         margin: 5% auto 10% 13%;
     } 
+
     .form{
         font-size: 12px;
         width: 50%;
         height: auto;
-    } 
+    }
+
     .registro{
         width: 90%;
     }
