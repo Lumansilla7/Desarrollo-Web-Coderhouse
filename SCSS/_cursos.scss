@@ -71,10 +71,6 @@
     box-sizing: border-box;
 }
 
-.col{
-    margin-bottom: 9rem;
-}
-
 .card2_img{ 
     @include sizes(80%, 12rem);
     border-radius: $radius-card; 
@@ -172,13 +168,39 @@
 
     .intro_cursos{
         @include tipografia (14px,bold);
-        width: 80%;
-        margin: 0.1rem 5rem 1rem 2rem;
+        width: 95%;
+        margin: 0.1rem 5rem 1rem 3rem;
         line-height: 2rem;
     }
+    .imagen_mitad{
+        width: 10%;
+    }
+    .intro_{
+        margin-bottom: 3rem;
+    }
+
+    .cursos{
+        margin-left:0.1rem;
+        margin-right: 2rem;
+    }
+
+    .info_cursos{
+        margin-left:2rem;
+        margin-bottom: 0.2rem;
+    }
+    .iconos2{
+        margin-left:1.9rem;
+    }
+    .card2{
+        width: 100%;
+        margin-left: 0.1rem;
+    }
+    .col1{
+        margin-left: 0.1rem;
+        width: 100%;
+        padding: 0.1rem;
+    }
 }
-
-
 
 @media (min-width: $pantalla-chica) and (max-width: $pantalla-mediana){
     .cursos{
@@ -193,13 +215,16 @@
 
 @media (max-width: $pantalla-chica){
     .cursos{
-        width: 100%;
-        margin-left: 1rem ;
+        width: 95%;
+        margin-left: 0.4rem ;
         margin-right: 10px;
     }
 
     .boton_compra{
-        padding: 1rem 4rem 1rem 4rem;
+        padding: 0.2rem 4rem 0.2rem 4rem;
+        width: 80%;
+        height: 5%;
+        margin-left:2rem;
     }
 }
 

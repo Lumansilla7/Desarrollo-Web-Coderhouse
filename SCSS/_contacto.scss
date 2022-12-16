@@ -136,28 +136,36 @@
 @media screen and (max-width: $pantalla-chica){
     .formregistro{
         flex-direction: column;
-        margin: 5% auto 10% 13%;
+        margin: 5% 5% 10% 5%;
     } 
 
     .form{
         font-size: 12px;
-        width: 50%;
+        width: 70%;
         height: auto;
     }
 
     .registro{
-        width: 90%;
+        width: 100%;
     }
 
     .botonform{
-        width: 10%;
+        width: 90%;
         text-align: center;
         font-size: 10px;
+    }
+
+
+    .button-container{
+        width: 90%;
+        margin-left:1rem;
+        margin-top:1.5rem;
     }
 
     .info_necesaria{
         margin-top: 10%;
         text-align: center;
+        margin-left:2rem;
     }
 
     .titulo_informacion{
